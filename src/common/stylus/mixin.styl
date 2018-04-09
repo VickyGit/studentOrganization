@@ -1,0 +1,35 @@
+border-1px($color)
+    position relative
+    &::after
+      position absolute
+      display block
+      width 100%
+      border-top 1px solid $color
+      left 0
+      bottom 0
+      content " "
+
+
+border-none()
+  &::after
+    display none
+
+bg-image($url)
+  background-image:url($url + '@2x.png')
+  @media (-webkit-min-device-pixel-ratio:3.0),(min-device-pixel-ratio:3.0)
+    background-image:url($url + '@3x.png')
+
+bg-height($url)
+  min-height 800px
+  background-size cover
+  background-image url($url+'.png')
+  @media(max-width 991px)
+    //平板
+    min-height 800px
+    background-size cover
+    background-image url($url+'-tablet.png')
+  @media(max-width 767px)
+    //手机
+    min-height 480px
+    background-size cover
+    background-image url($url+'-mobile.png')
