@@ -33,3 +33,18 @@ bg-height($url)
     min-height 480px
     background-size cover
     background-image url($url+'-mobile.png')
+
+end-bg-height($url)
+  min-height 480px
+  background-size cover
+  background-image url($url+'.png')
+  @media(max-width 991px)
+  //平板
+    min-height 480px
+    background-size cover
+    background-image url($url+'-tablet.png')
+  @media(max-width 767px)
+  //手机
+    min-height 240px
+    background-size cover
+    background-image url($url+'-mobile.png')

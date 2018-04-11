@@ -4,6 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './common/stylus/index.styl'
+// eslint-disable-next-line no-unused-vars
+import ElementUI from 'element-ui'
+// eslint-disable-next-line no-unused-vars
+import 'element-ui/lib/theme-chalk/index.css'
+
+Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
@@ -11,6 +17,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {App},
   template: '<App/>'
 })
