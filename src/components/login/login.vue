@@ -1,17 +1,17 @@
 <template>
   <div class="container">
     <div class="main-section">
-      <el-card>
-        <el-row>
-          <el-col :span="8">
-            <span>姓名</span>
+      <el-card class="card-section">
+        <el-row type="flex" align="middle" class="row-section">
+          <el-col :lg="8" :md="2" :sm="2">
+            <span>姓名：</span>
           </el-col>
-          <el-col :span="16">
-            <el-input></el-input>
+          <el-col :lg="16" :md="16" :sm="20">
+            <el-input v-model="name"></el-input>
           </el-col>
         </el-row>
 
-        <el-row>
+        <el-row type="flex" align="middle" class="row-section">
           <el-col :span="8">
             <span>性别：</span>
           </el-col>
@@ -22,7 +22,7 @@
         </el-row>
 
 
-        <el-row>
+        <el-row type="flex" align="middle" class="row-section">
           <el-col :span="8">
             <span>专业：</span>
           </el-col>
@@ -44,7 +44,68 @@
         </el-row>
 
 
+        <el-row type="flex" align="middle" class="row-section">
+          <el-col :span="8">
+            手机号：
+          </el-col>
+          <el-col :span="16">
+            <el-input placeholder="请输入手机号" v-model="phone"></el-input>
+            <a class="tip">立即领取校园手机号</a>
+          </el-col>
+        </el-row>
 
+        <el-row type="flex" align="middle" class="row-section">
+          <el-col :span="8">
+            QQ号码：
+          </el-col>
+          <el-col :span="16">
+            <el-input placeholder="请输入QQ号码" v-model="qq"></el-input>
+          </el-col>
+        </el-row>
+
+
+        <el-row type="flex" align="middle" class="row-section">
+          <el-col :span="8">
+            意向部门1：
+          </el-col>
+          <el-col :span="16">
+            <el-select v-model="departmentOne" placeholder="请选择意向部门">
+              <el-option v-for="item in departments"
+              :key="item.value"
+              :value="item.value"
+              :label="item.label"></el-option>
+            </el-select>
+          </el-col>
+        </el-row>
+
+        <el-row type="flex" align="middle" class="row-section">
+          <el-col :span="8">
+            意向部门2：
+          </el-col>
+          <el-col :span="16">
+            <el-select v-model="departmentTwo" placeholder="请选择意向部门">
+              <el-option v-for="item in departments"
+                         :key="item.value"
+                         :value="item.value"
+                         :label="item.label"></el-option>
+            </el-select>
+          </el-col>
+        </el-row>
+
+
+        <el-row type="flex" align="middle" class="row-section">
+          <el-col :span="8">
+            个人经历：
+          </el-col>
+          <el-col :span="16">
+            <el-input
+              type="textarea"
+              :autosize="{ minRows: 2, maxRows: 4}"
+              placeholder="请输入个人经历"
+              v-model="experience">
+            </el-input>
+          </el-col>
+        </el-row>
 
       </el-card>
     </div>
@@ -56,6 +117,7 @@
   export default {
     data(){
       return{
+        name:'',
         sex:'1',
         college:[
           {label:'阿里巴巴商学院',professional:[
@@ -81,7 +143,26 @@
 
           }
         ],
-        selectedProfessional:''
+        selectedProfessional:'',
+        phone:'',
+        qq:'',
+        departments:[
+          {
+              value:'部门1',
+              label:'部门1'
+          },
+          {
+            value:'部门2',
+            label:'部门2'
+          },
+          {
+            value:'部门3',
+            label:'部门3'
+          }
+        ],
+        departmentOne:'',
+        departmentTwo:'',
+        experience:''
       }
 
     },
@@ -95,10 +176,23 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+  @import "../../common/stylus/mixin.styl"
   .container
     width 100%
     height 100%
     box-sizing border-box
     .main-section
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
       background-color #e5ecef
+      padding 30px 0px
+      nav-margin-top()
+      .card-section
+        width 60%
+        .row-section
+          margin-bottom 20px
+          .tip
+            margin-top 5px
 </style>
