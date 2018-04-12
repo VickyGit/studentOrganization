@@ -48,3 +48,13 @@ end-bg-height($url)
     min-height 240px
     background-size cover
     background-image url($url+'-mobile.png')
+
+
+nav-margin-bottom()
+  margin-bottom 78px
+  @media(max-width 991px)
+  //平板
+    margin-bottom 78px
+  @media(max-width 767px)
+  //手机
+    margin-bottom 50px

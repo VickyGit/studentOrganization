@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <nav></nav>
     <div class="home-main">
       <div class="background-section">
         <div class="header-section">
@@ -66,41 +65,8 @@
             <h2 class="end-sm-text">我们在杭州师范大学等你</h2>
           </div>
         </transition>
-        <el-button type="warning" round class="join-btn">加入我们</el-button>
+        <el-button type="warning" round class="join-btn" @click="clickLogin">加入我们</el-button>
       </div>
-      <footer class="footer-section">
-        <el-row  :gutter="20">
-          <el-col :lg="5" :md="5" :sm="24" :xs="24" push="2">
-            <div class="footer-title">杭州师范大学&nbsp&nbsp学生网络信息化服务中</div>
-            <div>Copyright © 2018 Welcome New by Internet Service Center</div>
-          </el-col>
-          <el-col :lg="5" :md="5" :sm="24" :xs="24" push="2">
-            <h4 class="footer-title">关于师大</h4>
-            <ul>
-              <li class="footer-item">杭州师范大学官网</li>
-              <li class="footer-item">杭州师范大学学工部</li>
-              <li class="footer-item">杭州师范大学教务处</li>
-              <li class="footer-item">杭州师范大学团委</li>
-            </ul>
-          </el-col>
-          <el-col :lg="5" :md="5" :sm="24" :xs="24" push="2">
-            <h4 class="footer-title">入学宝典</h4>
-            <ul>
-              <li class="footer-item">迎新服务网</li>
-              <li class="footer-item">勤工助学网</li>
-            </ul>
-          </el-col>
-          <el-col :lg="5" :md="5" :sm="24" :xs="24" push="2">
-            <h4 class="footer-title">新生解疑</h4>
-            <ul>
-              <li class="footer-item">QQ仓前：568906263</li>
-              <li class="footer-item">QQ下沙：569615332</li>
-              <li class="footer-item">学工部公众号：hsdxsgz</li>
-            </ul>
-
-          </el-col>
-        </el-row>
-      </footer>
     </div>
   </div>
 </template>
@@ -111,7 +77,7 @@
       return {
         password: '这是测试信息',
         headerAnimshow: false,
-        endAnimShow:false
+        endAnimShow:false,
       }
     },
     created () {
@@ -147,6 +113,7 @@
         if(windowHeight+scrolled>endSectionDomTop){
           this.endAnimShow=true
         }
+
       })
 //      window.onscroll=()=>{
 //        let scrolled = document.documentElement.scrollTop || document.body.scrollTop
@@ -156,6 +123,11 @@
 
     },
     methods: {
+      clickLogin(){
+        this.$router.push('/login')
+      }
+    },
+    components:{
 
     }
   }
@@ -263,18 +235,5 @@
             font-size 25px
         .join-btn
           margin-top 30px
-      .footer-section
-        display flex
-        flex-direction column
-        justify-content center
-        width 100%
-        min-height 200px
-        .footer-title
-          color #8fa4af
-          font-size 20px
-          font-weight 600
-          margin 10px 0px
-        .footer-item
-          padding 5px 0px
-          color #263239
+
 </style>
