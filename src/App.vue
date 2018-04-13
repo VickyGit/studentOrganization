@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="container">
-    <myNav :scrolled="navScrolled"></myNav>
     <router-view/>
     <my-footer></my-footer>
   </div>
@@ -17,22 +16,12 @@
       }
     },
     mounted(){
-      let scrolled = document.documentElement.scrollTop || document.body.scrollTop
-      window.addEventListener('scroll',()=>{
-        scrolled = document.documentElement.scrollTop || document.body.scrollTop
-        //滑动修改导航栏的样式
-        if(scrolled>0){
-          this.navScrolled=true
-        }else{
-          this.navScrolled=false
-        }
-      })
+
     },
     methods:{
 
     },
     components:{
-      myNav,
       myFooter
     }
   }
