@@ -50,7 +50,7 @@
           </el-col>
           <el-col :span="16">
             <el-input placeholder="请输入手机号" v-model="phone"></el-input>
-            <a class="tip">立即领取校园手机号</a>
+            <a class="tip">还没有校园卡？</a>
           </el-col>
         </el-row>
 

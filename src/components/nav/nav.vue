@@ -1,7 +1,7 @@
 <template>
   <nav class="nav-section" :class="{scrolledClass: scrolled}">
     <img src="./Logo.png" class="logo-img"/>
-    <el-button type="success" round size="mini" >加入我们</el-button>
+    <el-button type="success" round size="mini" @click="clickLogin">加入我们</el-button>
   </nav>
 </template>
 
@@ -15,7 +15,12 @@
     },
     created(){
 
-    }
+    },
+    methods: {
+      clickLogin(){
+        this.$router.push('/login')
+      }
+    },
   }
 </script>
 

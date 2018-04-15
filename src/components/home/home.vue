@@ -18,7 +18,7 @@
           以“杭师大微学工”微信公众号为主要平台，发布师大校园学生工作前沿动态，为师大学生在第一时间内提供各种校园信息，并以互联网为抓手定期开展各类线上线下系列特色活动。</p>
         <div class="btn-section">
           <el-button type="primary" round>了解更多</el-button>
-          <el-button type="success" round>马上报名</el-button>
+          <el-button type="success" round @click="clickLogin">马上报名</el-button>
         </div>
       </div>
       <div class="help-section">
