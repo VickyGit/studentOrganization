@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <myNav :scrolled="false" :fixed="false" :btnToIndex="true"></myNav>
     <div class="main-section">
       <el-card class="card-section">
         <el-row type="flex" align="middle" class="row-section">
@@ -35,9 +36,7 @@
                 :key="item.value"
                 :value="item.value"
                 :label="item.label">
-
                 </el-option>
-
               </el-option-group>
             </el-select>
           </el-col>
@@ -50,7 +49,7 @@
           </el-col>
           <el-col :span="16">
             <el-input placeholder="请输入手机号" v-model="phone"></el-input>
-            <a class="tip">还没有校园卡？</a>
+            <a class="tip" href="http://www.189.cn/" target="_blank">还没有校园卡？</a>
           </el-col>
         </el-row>
 
@@ -106,14 +105,14 @@
             </el-input>
           </el-col>
         </el-row>
-
+        <el-button type="primary" round :loading="true">提交</el-button>
       </el-card>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-
+  import myNav from '../nav/nav.vue'
   export default {
     data(){
       return{
@@ -170,7 +169,7 @@
 
     },
     components:{
-
+      myNav
     }
   }
 </script>
@@ -188,11 +187,18 @@
       align-items center
       background-color #e5ecef
       padding 30px 0px
-      nav-margin-top()
       .card-section
         width 60%
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
         .row-section
           margin-bottom 20px
           .tip
+            font-size 15px
+            line-height 15px
             margin-top 5px
+            text-decoration underline
+
 </style>

@@ -1,12 +1,13 @@
 <template>
   <div class="container">
+    <myNav :scrolled="navScrolled" :fixed="true" :btnToIndex="false"></myNav>
     <div class="home-main">
       <div class="background-section">
         <div class="header-section">
           <transition  enter-active-class="animated fade fadeInRight">
             <div v-show="headerAnimshow">
-              <h1 class="title">旅途</h1>
-              <h2>WL Trip</h2>
+            <h1 class="title">行远·登高</h1>
+            <h2 class="smill-title">青春无问西东，岁月自成芳华</h2>
             </div>
           </transition>
         </div>
@@ -53,7 +54,9 @@
         </el-row>
       </div>
       <div class="activity-section">
-        <img src="./dianxin01.jpg" class="dianxin-img"/>
+        <a href="http://www.189.cn/" target="_blank" style="cursor:default;">
+          <img src="./dianxin01.jpg" class="dianxin-img"/>
+        </a>
         <el-tooltip class="item" effect="dark" :content="password" placement="top">
           <el-button type="warning" round class="password-btn">查看口令</el-button>
         </el-tooltip>
@@ -72,12 +75,14 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import myNav from '../nav/nav.vue'
   export default {
     data () {
       return {
         password: '这是测试信息',
         headerAnimshow: false,
         endAnimShow:false,
+        navScrolled:false
       }
     },
     created () {
@@ -113,6 +118,12 @@
         if(windowHeight+scrolled>endSectionDomTop){
           this.endAnimShow=true
         }
+        //滑动修改导航栏的样式
+        if(scrolled>0){
+          this.navScrolled=true
+        }else{
+          this.navScrolled=false
+        }
 
       })
 //      window.onscroll=()=>{
@@ -128,7 +139,7 @@
       }
     },
     components:{
-
+      myNav
     }
   }
 </script>
@@ -148,7 +159,9 @@
         background-repeat no-repeat
         background-attachment fixed
         background-position center center
-        bg-height('background12')
+        background-image url('./bg_head.jpg')
+        min-height 800px
+        background-size cover
         .header-section
           display flex;
           flex-direction column;
@@ -156,7 +169,11 @@
           align-items center;
           color white
           .title
-            font-size 55px
+            font-size 100px
+            line-height 100px
+            margin-bottom 20px
+          .smill-title
+            font-size 20px
       .introduce-section
         position relative
         display flex
@@ -203,6 +220,7 @@
       .activity-section
         position relative
         width 100%
+        cursor default
         .dianxin-img
           width 100%
         .password-btn
@@ -218,7 +236,9 @@
         background-repeat no-repeat
         background-attachment fixed
         background-position center center
-        end-bg-height('background12')
+        min-height 480px
+        background-size cover
+        background-image url('./bg_end.jpg')
         .center-section
           display flex
           flex-direction column
