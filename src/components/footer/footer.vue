@@ -1,6 +1,6 @@
 <template>
   <footer class="footer-section">
-    <el-row  type="flex" justify="space-around">
+    <el-row>
       <el-col :lg="5" :md="5" :sm="24" :xs="24" >
         <p class="footer-title">杭州师范大学&nbsp学生网络信息化服务中</p>
         <p class="copyright">Copyright © 2018 Welcome New by Internet Service Center</p>

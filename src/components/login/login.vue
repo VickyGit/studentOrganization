@@ -49,7 +49,7 @@
           </el-col>
           <el-col :span="16">
             <el-input placeholder="请输入手机号" v-model="phone"></el-input>
-            <a class="tip" href="http://www.189.cn/" target="_blank">还没有校园卡？</a>
+            <a class="tip" href="http://www.189.cn/" target="_blank">还没有校园卡？立即领取</a>
           </el-col>
         </el-row>
 
@@ -199,6 +199,6 @@
             font-size 15px
             line-height 15px
             margin-top 5px
-            text-decoration underline
+            color:#666
 
 </style>

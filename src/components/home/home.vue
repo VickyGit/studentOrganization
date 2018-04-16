@@ -250,7 +250,7 @@
             font-weight bold
             font-size 50px
           .end-sm-text
-            color #999
+            color white
             margin-top 30px
             font-size 25px
         .join-btn
