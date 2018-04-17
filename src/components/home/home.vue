@@ -26,40 +26,46 @@
         <el-row :gutter="100">
           <el-col :lg="6" :md="12" :sm="1">
             <el-card :body-style="{ padding: '0px' }" class="card-section" shadow="hover">
-              <img src="./card-img.jpg" class="help-img"/>
-              <div class="help-title">《入学手册》</div>
+              <img src="./img01.jpg" class="help-img"/>
+              <div class="help-title">《杭师大生活宝典》</div>
             </el-card>
           </el-col>
           <el-col :lg="6" :md="12" :sm="24">
             <el-card :body-style="{ padding: '0px',height:'100%',display:'flex',flexDirection:'column' }"
                      class="card-section" shadow="hover">
-              <img src="./card-img.jpg" class="help-img"/>
-              <div class="help-title">《入学手册》</div>
+              <img src="./img02.jpg" class="help-img"/>
+              <div class="help-title">《杭师大入学指南》</div>
             </el-card>
           </el-col>
           <el-col :lg="6" :md="12" :sm="24">
             <el-card :body-style="{ padding: '0px',height:'100%',display:'flex',flexDirection:'column' }"
                      class="card-section" shadow="hover">
-              <img src="./card-img.jpg" class="help-img"/>
-              <div class="help-title">《入学手册》</div>
+              <img src="./img03.jpg" class="help-img"/>
+              <div class="help-title">《杭师大交通指南》</div>
             </el-card>
           </el-col>
           <el-col :lg="6" :md="12" :sm="24">
             <el-card :body-style="{ padding: '0px',height:'100%',display:'flex',flexDirection:'column' }"
                      class="card-section" shadow="hover">
-              <img src="./card-img.jpg" class="help-img"/>
-              <div class="help-title">《入学手册》</div>
+              <img src="./img04.jpg" class="help-img"/>
+              <div class="help-title">《开学物品清单》</div>
             </el-card>
           </el-col>
         </el-row>
+      </div>
+      <div class="red-envelope-section">
+        <img src="./background12.png"/>
+        <div class="btn-section">
+          <el-button type="primary" round @click="openAlert()">活动详情</el-button>
+          <el-tooltip class="item" effect="dark" :content="password" placement="top">
+            <el-button type="warning" round>查看口令</el-button>
+          </el-tooltip>
+        </div>
       </div>
       <div class="activity-section">
         <a href="http://www.189.cn/" target="_blank" style="cursor:default;">
           <img src="./dianxin01.jpg" class="dianxin-img"/>
         </a>
-        <el-tooltip class="item" effect="dark" :content="password" placement="top">
-          <el-button type="warning" round class="password-btn">查看口令</el-button>
-        </el-tooltip>
       </div>
       <div class="end-section" ref="endSection">
         <transition enter-active-class="animated fade fadeInRight">
@@ -136,6 +142,11 @@
     methods: {
       clickLogin(){
         this.$router.push('/login')
+      },
+      openAlert(){
+        this.$alert('信息君将在6月20日、6月21日、6月22日,22:00派发千元现金红包口令，届时请点击查看口令页面，查看支付宝红包口令。','活动详情',{
+          confirmButtonText: '确定'
+        })
       }
     },
     components:{
@@ -217,16 +228,23 @@
           .help-title
             padding 14px
             font-size 15px
+      .red-envelope-section
+        position relative
+        width 100%
+        &.red-envelope-section > img
+          width 100%
+          height 400px
+        .btn-section
+          position absolute
+          bottom 5%
+          right 5%
       .activity-section
         position relative
         width 100%
         cursor default
         .dianxin-img
           width 100%
-        .password-btn
-          position absolute
-          bottom 5%
-          right 5%
+
       .end-section
         display flex
         flex-direction column
