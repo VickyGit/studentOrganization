@@ -18,8 +18,8 @@
         <p class="introduce-text"> 学生网络信息化服务中心是负责“杭师大微学工”微信公众号、新生网、毕业生离校系统等网络平台的运营与管理，为同学提供综合网络服务的学生组织。中心本着贴近生活，服务学生的宗旨，
           以“杭师大微学工”微信公众号为主要平台，发布师大校园学生工作前沿动态，为师大学生在第一时间内提供各种校园信息，并以互联网为抓手定期开展各类线上线下系列特色活动。</p>
         <div class="btn-section">
-          <el-button type="primary" round>了解更多</el-button>
-          <el-button type="success" round @click="clickLogin">马上报名</el-button>
+          <el-button type="primary" round class="btn">了解更多</el-button>
+          <el-button type="success" round @click="clickLogin" class="btn">马上报名</el-button>
         </div>
       </div>
       <div class="help-section">
@@ -54,11 +54,11 @@
         </el-row>
       </div>
       <div class="red-envelope-section">
-        <img src="./background12.png"/>
+
         <div class="btn-section">
-          <el-button type="primary" round @click="openAlert()">活动详情</el-button>
+          <el-button type="primary" round @click="openAlert()" class="btn">活动详情</el-button>
           <el-tooltip class="item" effect="dark" :content="password" placement="top">
-            <el-button type="warning" round>查看口令</el-button>
+            <el-button type="success" round class="btn">查看口令</el-button>
           </el-tooltip>
         </div>
       </div>
@@ -74,7 +74,7 @@
             <h2 class="end-sm-text">我们在杭州师范大学等你</h2>
           </div>
         </transition>
-        <el-button type="warning" round class="join-btn" @click="clickLogin">加入我们</el-button>
+        <el-button type="warning" round class="join-btn btn" @click="clickLogin">加入我们</el-button>
       </div>
     </div>
   </div>
@@ -139,6 +139,9 @@
 
 
     },
+    computed:{
+
+    },
     methods: {
       clickLogin(){
         this.$router.push('/login')
@@ -160,6 +163,9 @@
   .container
     width 100%
     height 100%
+    .btn
+      font-size 0.8rem
+      padding 0.5rem 1rem
     .home-main
       width 100%
       .background-section
@@ -180,11 +186,11 @@
           align-items center;
           color white
           .title
-            font-size 100px
+            font-size 4rem
             line-height 100px
             margin-bottom 20px
           .smill-title
-            font-size 20px
+            font-size 1rem
       .introduce-section
         position relative
         display flex
@@ -195,17 +201,17 @@
         min-height 500px
         margin-top 50px
         .more-text
-          font-size 20px
+          font-size 1rem
           color #666
         .introduce-title-text
           color black
           margin-top 20px
           font-weight bold
-          font-size 50px
+          font-size 2rem
         .introduce-text
           margin-top 20px
           max-width 60%
-          font-size 25px
+          font-size 1.5rem
         .btn-section
           display flex
           flex-direction row
@@ -227,17 +233,16 @@
             width 100%
           .help-title
             padding 14px
-            font-size 15px
+            font-size 1rem
       .red-envelope-section
         position relative
         width 100%
-        &.red-envelope-section > img
-          width 100%
-          height 400px
+        redbag-bg-height('./hongbao')
         .btn-section
           position absolute
           bottom 5%
           right 5%
+
       .activity-section
         position relative
         width 100%
@@ -266,11 +271,11 @@
             text-align center
             color: white
             font-weight bold
-            font-size 50px
+            font-size 3rem
           .end-sm-text
             color white
             margin-top 30px
-            font-size 25px
+            font-size 1rem
         .join-btn
           margin-top 30px
 

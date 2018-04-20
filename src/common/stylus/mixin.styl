@@ -58,3 +58,18 @@ nav-margin-top()
   @media(max-width 767px)
   //手机
     margin-top 50px
+
+redbag-bg-height($url)
+  min-height 480px
+  background-size cover
+  background-image url($url+'.jpg')
+  @media(max-width 991px)
+  //平板
+    min-height 480px
+    background-size cover
+    background-image url($url+'-tablet.jpg')
+  @media(max-width 767px)
+  //手机
+    min-height 240px
+    background-size cover
+    background-image url($url+'-mobile.jpg')
