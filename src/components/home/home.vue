@@ -85,7 +85,7 @@
   export default {
     data () {
       return {
-        password: '这是测试信息',
+        password: '手机套餐我就选电信',
         headerAnimshow: false,
         endAnimShow:false,
         navScrolled:false
