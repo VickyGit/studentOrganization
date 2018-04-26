@@ -159,7 +159,7 @@
         background-repeat no-repeat
         background-attachment fixed
         background-position center center
-        background-image url('./bg_head.jpg')
+        background-image url('./bg_head.png')
         min-height 800px
         background-size cover
         .header-section
@@ -238,7 +238,7 @@
         background-position center center
         min-height 480px
         background-size cover
-        background-image url('./bg_end.jpg')
+        background-image url('./bg_end.png')
         .center-section
           display flex
           flex-direction column
@@ -250,7 +250,7 @@
             font-weight bold
             font-size 50px
           .end-sm-text
-            color #999
+            color white
             margin-top 30px
             font-size 25px
         .join-btn
