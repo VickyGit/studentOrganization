@@ -215,6 +215,7 @@
           margin-top 20px
           max-width 60%
           font-size 1.5rem
+          line-height 2.2rem
         .btn-section
           display flex
           flex-direction row
