@@ -18,7 +18,11 @@
         <p class="introduce-text"> 学生网络信息化服务中心是负责“杭师大微学工”微信公众号、新生网、毕业生离校系统等网络平台的运营与管理，为同学提供综合网络服务的学生组织。中心本着贴近生活，服务学生的宗旨，
           以“杭师大微学工”微信公众号为主要平台，发布师大校园学生工作前沿动态，为师大学生在第一时间内提供各种校园信息，并以互联网为抓手定期开展各类线上线下系列特色活动。</p>
         <div class="btn-section">
+<<<<<<< HEAD
           <el-button type="primary" round class="btn" @click="clickKonwUs">了解更多</el-button>
+=======
+          <el-button type="primary" round class="btn">了解更多</el-button>
+>>>>>>> 0f5f7dcb0f80deebb87b52c5f4c5c5c06ed1c419
           <el-button type="success" round @click="clickLogin" class="btn">马上报名</el-button>
         </div>
       </div>
@@ -153,6 +157,7 @@
       },
       clickKonwUs(){
           this.$router.push("/introduce")
+
       }
     },
     components:{
@@ -189,11 +194,11 @@
           align-items center;
           color white
           .title
-            font-size 6rem
+            font-size 4rem
             line-height 100px
             margin-bottom 20px
           .smill-title
-            font-size 2rem
+            font-size 1rem
       .introduce-section
         position relative
         display flex
@@ -215,7 +220,6 @@
           margin-top 20px
           max-width 60%
           font-size 1.5rem
-          line-height 2.2rem
         .btn-section
           display flex
           flex-direction row
