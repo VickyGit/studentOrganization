@@ -8,17 +8,17 @@
       <el-col :lg="5" :md="5" :sm="24" :xs="24" >
         <h4 class="footer-title">关于师大</h4>
         <ul>
-          <li class="footer-item">杭州师范大学官网</li>
-          <li class="footer-item">杭州师范大学学工部</li>
-          <li class="footer-item">杭州师范大学教务处</li>
-          <li class="footer-item">杭州师范大学团委</li>
+          <li class="footer-item"><a href="http://www.hznu.edu.cn/">杭州师范大学官网</a></li>
+          <li class="footer-item"><a href="http://xgb.hznu.edu.cn/">杭州师范大学学工部</a></li>
+          <li class="footer-item"><a href="http://jwc.hznu.edu.cn/">杭州师范大学教务处</a></li>
+          <li class="footer-item"><a href="http://youth.hznu.edu.cn/">杭州师范大学团委</a></li>
         </ul>
       </el-col>
       <el-col :lg="5" :md="5" :sm="24" :xs="24" >
         <h4 class="footer-title">入学宝典</h4>
         <ul>
-          <li class="footer-item">迎新服务网</li>
-          <li class="footer-item">勤工助学网</li>
+          <li class="footer-item"><a href="http://xinsheng.hznu.edu.cn/index.action">迎新服务网</a></li>
+          <li class="footer-item"><a href="http://xsqgzx.hznu.edu.cn/">勤工助学网</a></li>
         </ul>
       </el-col>
       <el-col :lg="5" :md="5" :sm="24" :xs="24" >
@@ -60,7 +60,8 @@
       white-space pre-wrap
     .copyright
       white-space pre-wrap
-    .footer-item
+    .footer-item a
       padding 5px 0px
       color #263239
+
 </style>
