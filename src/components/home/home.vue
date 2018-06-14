@@ -18,7 +18,18 @@
         <p class="introduce-text"> 学生网络信息化服务中心是负责“杭师大微学工”微信公众号、新生网、毕业生离校系统等网络平台的运营与管理，为同学提供综合网络服务的学生组织。中心本着贴近生活，服务学生的宗旨，
           以“杭师大微学工”微信公众号为主要平台，发布师大校园学生工作前沿动态，为师大学生在第一时间内提供各种校园信息，并以互联网为抓手定期开展各类线上线下系列特色活动。</p>
         <div class="btn-section">
-          <el-button type="primary" round class="btn">了解更多</el-button>
+
+          <el-dropdown placement="bottom-start">
+            <el-button type="primary" round  class="btn">
+              了解更多<i class="el-icon-arrow-down el-icon--right"></i>
+            </el-button>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item @click.native="clickKnowUs">仓前校区</el-dropdown-item>
+              <el-dropdown-item>下沙校区</el-dropdown-item>
+
+            </el-dropdown-menu>
+          </el-dropdown>
+
           <el-button type="success" round @click="clickLogin" class="btn">马上报名</el-button>
         </div>
       </div>
@@ -146,8 +157,11 @@
       clickLogin(){
         this.$router.push('/login')
       },
+      clickKnowUs(){
+        this.$router.push('/introduce')
+      },
       openAlert(){
-        this.$alert('信息君将在6月20日、6月21日、6月22日,22:00派发千元现金红包口令，届时请点击查看口令页面，查看支付宝红包口令。','活动详情',{
+        this.$alert('信息君将在6月20日、6月21日、6月22日,22:00派发千元现金红包口令，届时请点击查看口令页面，查看支付宝红包口令','活动详情',{
           confirmButtonText: '确定'
         })
       }
@@ -166,6 +180,7 @@
     .btn
       font-size 0.8rem
       padding 0.5rem 1rem
+      margin-right 1rem
     .home-main
       width 100%
       .background-section
@@ -176,7 +191,7 @@
         background-repeat no-repeat
         background-attachment fixed
         background-position center center
-        background-image url('./bg_head.jpg')
+        background-image url('./bg_head.png')
         min-height 800px
         background-size cover
         .header-section
@@ -261,7 +276,7 @@
         background-position center center
         min-height 480px
         background-size cover
-        background-image url('./bg_end.jpg')
+        background-image url('./bg_end.png')
         .center-section
           display flex
           flex-direction column

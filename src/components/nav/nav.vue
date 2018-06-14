@@ -74,9 +74,4 @@
       top 0px
       right 0px
 
-
-
-
-
-
 </style>
