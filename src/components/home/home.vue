@@ -30,6 +30,7 @@
             </el-dropdown-menu>
           </el-dropdown>
 
+
           <el-button type="success" round @click="clickLogin" class="btn">马上报名</el-button>
         </div>
       </div>
@@ -164,6 +165,10 @@
         this.$alert('信息君将在6月20日、6月21日、6月22日,22:00派发千元现金红包口令，届时请点击查看口令页面，查看支付宝红包口令','活动详情',{
           confirmButtonText: '确定'
         })
+      },
+      clickKonwUs(){
+          this.$router.push("/introduce")
+
       }
     },
     components:{

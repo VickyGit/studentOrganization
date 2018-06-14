@@ -84,6 +84,7 @@
             <img class="member-header" src="./zzb_wl.jpg"/>
             <div class="member-name">
               组织部 王琳
+
             </div>
             <div class="member-college">
               阿里巴巴商学院
@@ -132,6 +133,7 @@
             <img class="member-header" src="./jsb_zlh.jpg"/>
             <div class="member-name">
               技术部 张林涵
+
             </div>
             <div class="member-college">
               阿里巴巴商学院
@@ -171,6 +173,7 @@
             <img class="member-header" src="./bjb_zy.jpg"/>
             <div class="member-name">
               编辑部 郑乔
+
             </div>
             <div class="member-college">
               阿里巴巴商学院
