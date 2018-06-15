@@ -25,7 +25,7 @@
             </el-button>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item @click.native="clickKnowUs">仓前校区</el-dropdown-item>
-              <el-dropdown-item>下沙校区</el-dropdown-item>
+              <el-dropdown-item @click.native="clickKnowXiaSha">下沙校区</el-dropdown-item>
 
             </el-dropdown-menu>
           </el-dropdown>
@@ -169,6 +169,9 @@
       clickKonwUs(){
           this.$router.push("/introduce")
 
+      },
+      clickKnowXiaSha(){
+        this.$router.push("/xiasha")
       }
     },
     components:{

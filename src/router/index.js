@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import home from '@/components/home/home'
 import login from '@/components/login/login'
 import introduce from '@/components/introduce/introduce'
-
+import xiasha from '@/components/xiasha/xiasha'
 Vue.use(Router)
 
 export default new Router({
@@ -22,6 +22,11 @@ export default new Router({
       path:'/introduce',
       name:"introduce",
       component:introduce
+    },
+    {
+      path:'/xiasha',
+      name:"xiasha",
+      component:xiasha
     }
   ]
 })
