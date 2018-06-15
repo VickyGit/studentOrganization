@@ -8,12 +8,12 @@ import './common/stylus/index.styl'
 import ElementUI from 'element-ui'
 // eslint-disable-next-line no-unused-vars
 import 'element-ui/lib/theme-chalk/index.css'
-// import BootstrapVue from 'bootstrap-vue'
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(ElementUI)
-// Vue.use(BootstrapVue)
+Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false
 

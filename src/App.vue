@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div id="app" class="app-container">
     <router-view/>
     <my-footer></my-footer>
   </div>
@@ -28,7 +28,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  .container
+  .app-container
     position relative
     width 100%
     height 100%

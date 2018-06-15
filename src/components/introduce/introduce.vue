@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="cangqian-container">
     <myNav :scrolled="false" :fixed="false" :btnToIndex="true"></myNav>
     <div class="header-section">
       <h1 class="header-title">信息君</h1>
@@ -25,11 +25,10 @@
 
       </div>
 
-
-
-      <div class="member-section">
-        <el-row class="row-section">
-          <el-col :xs="12" :sm="12" :md="12" :lg="3" :xl="3" class="member-item-section" @click.native="centerDialogVisible = true">
+      <b-container class="member-section">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <b-row class="row-section">
+          <b-col cols="12" md="3" sm="6" xs="6" class="member-item-section">
             <img class="member-header" src="./xyw.jpg"/>
             <div class="member-name">
               主任 许延玮
@@ -40,8 +39,8 @@
             <div class="member-class">
               法学163
             </div>
-          </el-col>
-          <el-col :xs="12" :sm="12" :md="12" :lg="3" :xl="3" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+          <b-col cols="12" md="3" sm="6" xs="6" class="member-item-section">
             <img class="member-header" src="./zbg.jpg"/>
             <div class="member-name">
               副主任 章贵宝
@@ -52,8 +51,9 @@
             <div class="member-class">
               教育技术学161
             </div>
-          </el-col>
-          <el-col :xs="12" :sm="12" :md="12" :lg="3" :xl="3" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+
+          <b-col cols="12" md="3" sm="6" xs="6" class="member-item-section">
             <img class="member-header" src="./xfj.jpg"/>
             <div class="member-name">
               副主任 许芳洁
@@ -64,8 +64,9 @@
             <div class="member-class">
               文管161
             </div>
-          </el-col>
-          <el-col :xs="12" :sm="12" :md="12" :lg="3" :xl="3" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+
+          <b-col cols="12" md="3" sm="6" xs="6" class="member-item-section">
             <img class="member-header" src="./wzb.jpg"/>
             <div class="member-name">
               部长 吴卓嫔
@@ -76,11 +77,12 @@
             <div class="member-class">
               法学163
             </div>
-          </el-col>
-        </el-row>
+          </b-col>
+        </b-row>
 
-        <el-row class="row-section">
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+
+        <b-row class="row-section">
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./zzb_wl.jpg"/>
             <div class="member-name">
               组织部 王琳
@@ -92,8 +94,8 @@
             <div class="member-class">
               电商173
             </div>
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./zzb_wmf.jpg"/>
             <div class="member-name">
               组织部 吴梦凡
@@ -104,8 +106,9 @@
             <div class="member-class">
               法学174
             </div>
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./hdb_wyz.jpg"/>
             <div class="member-name">
               活动部 吴玉州
@@ -116,8 +119,9 @@
             <div class="member-class">
               法学174
             </div>
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./hdb_hwy.jpg"/>
             <div class="member-name">
               活动部 何婉盈
@@ -128,8 +132,9 @@
             <div class="member-class">
               学前171
             </div>
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./jsb_zlh.jpg"/>
             <div class="member-name">
               技术部 张林涵
@@ -141,8 +146,8 @@
             <div class="member-class">
               电商172
             </div>
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./jsb_zqq.jpg"/>
             <div class="member-name">
               技术部 庄晴秋
@@ -153,11 +158,12 @@
             <div class="member-class">
               学前173
             </div>
-          </el-col>
-        </el-row>
+          </b-col>
+        </b-row>
 
-        <el-row class="row-section">
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+
+        <b-row class="row-section">
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./bjb_yty.jpg"/>
             <div class="member-name">
               编辑部 柳陶莹
@@ -168,8 +174,8 @@
             <div class="member-class">
               人教171
             </div>
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./bjb_zy.jpg"/>
             <div class="member-name">
               编辑部 郑乔
@@ -181,8 +187,9 @@
             <div class="member-class">
               电商174
             </div>
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./mgb_pll.jpg"/>
             <div class="member-name">
               美工部 彭兰琳
@@ -193,8 +200,9 @@
             <div class="member-class">
               学前172
             </div>
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./mgb_xyl.jpg"/>
             <div class="member-name">
               美工部 徐艺琳
@@ -205,8 +213,9 @@
             <div class="member-class">
               小教173
             </div>
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./syb_sj.jpg"/>
             <div class="member-name">
               摄影部 宋佳
@@ -217,8 +226,8 @@
             <div class="member-class">
               电商171
             </div>
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+          </b-col>
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./syb_yyq.jpg"/>
             <div class="member-name">
               摄影部 陶雨晴
@@ -229,14 +238,15 @@
             <div class="member-class">
               法学173
             </div>
-          </el-col>
-        </el-row>
+          </b-col>
+        </b-row>
 
-        <el-row class="row-section">
-          <el-col :xs="24" :sm="4" :md="4" :lg="4" :xl="4" class="member-item-section" @click="centerDialogVisible = true">
+
+        <b-row class="row-section">
+          <b-col cols="12" md="2" sm="3" xs="6" class="member-item-section">
             <img class="member-header" src="./wab_lxy.jpg"/>
             <div class="member-name">
-             文案部 陆心怡
+              文案部 陆心怡
             </div>
             <div class="member-college">
               教育学院
@@ -244,10 +254,13 @@
             <div class="member-class">
               小教171
             </div>
-          </el-col>
+          </b-col>
 
-        </el-row>
-      </div>
+        </b-row>
+      </b-container>
+
+
+
 
     </div>
     <el-dialog
@@ -291,7 +304,7 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixin.styl"
-    .container
+    .cangqian-container
       width 100%
       height 100%
       box-sizing border-box

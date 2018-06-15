@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="home-container">
     <myNav :scrolled="navScrolled" :fixed="true" :btnToIndex="false"></myNav>
     <div class="home-main">
       <div class="background-section">
@@ -179,7 +179,7 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixin.styl"
-  .container
+  .home-container
     width 100%
     height 100%
     .btn

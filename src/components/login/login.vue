@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="login-container">
     <myNav :scrolled="false" :fixed="false" :btnToIndex="true"></myNav>
     <div class="main-section">
       <el-card class="card-section">
@@ -176,7 +176,7 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixin.styl"
-  .container
+  .login-container
     width 100%
     height 100%
     box-sizing border-box
